@@ -3,13 +3,18 @@
 	border:1px solid black;
 	}
 #ala{
-	background-color:lightblue;
+	
 
 }
 #geo{
-	background-color:lightblue;
+	
 
 }
+
+#position{
+    position:fixed;
+}
+
 .menu-context {
     position: absolute;
     left:-9999px;

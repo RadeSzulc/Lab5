@@ -14,16 +14,41 @@
         <li><a href="">Element menu 3</a></li>
         <li><a href="">Element menu 4</a></li>
     </ul>
-    <div id="right">
     
-    Kliknij tu
+    <div id="right">
+        
+        Kliknij tu
     
     </div>
+    
+    <script type="text/javascript">
+    const menu = document.querySelector('.menu-context');
+
+
+    function removeMenu() {
+    menu.style.left = '-9999px';
+    menu.style.top = '-9999px';
+}
+
+    function rightButton(e) {
+    e.preventDefault();
+
+    if (e.button === 2) {
+        menu.style.left = e.pageX;
+        menu.style.top = e.pageY;
+    }
+}
+    
+    const block = document.querySelector('#right');
+    block.addEventListener('mousedown', rightButton);
+
+    </script>
+    
     
     <div id="position">
     <button onclick="getLocation()">Pobierz</button>
     <p id="demo"></p>
-</div>
+    </div>
 
 </body>
 </html>
